@@ -9,12 +9,15 @@
 
 <html>
 <head>
-    <title>Title</title>
+    <title>TRAIN BOOKING. RIGHT NOW!</title>
 </head>
 <body>
-<a href="${pageContext.request.contextPath}do/user/login">Registration</a>
+<p align="center" style="color:#ff0099; font-size:30px">
+Продажа железнодорожных билетов прямо здесь и сейчас!</p>
+<img src="/11886144107312417885.png" alt="Logotype">
+<a href="${pageContext.request.contextPath}https://www.epam.kz/">Информационная поддержка: EPAM Systems!</a>
 
-<form action="do/user/login" method="post">
+<form action="https://www.epam.kz/" method="post">
 
 </form>
 
