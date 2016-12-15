@@ -11,8 +11,31 @@
     <title>Train booking</title>
 </head>
 <body>
-<p align="center" style="color:#302cff; font-size:30px">
-Расписание поездов и покупка билетов прямо здесь и сейчас!</p>
+<p align="center" style="color:#6352ff; font-size:30px">
+    Расписание поездов и покупка билетов прямо здесь и сейчас!</p>
+<form>
+    <p align="center" style="color:#302cff; font-size:20px">
+        Логин:
+        <input name="userAuthorizationLogin" type="text" size="30">
+        &nbsp;
+        Пароль:
+        <input name="userAuthorizationPassword" type="password" size="30">
+        &nbsp;
+
+        <button>Войти в систему</button>
+        &nbsp;
+        <a href="${pageContext.request.contextPath}/main.jsp" class="linkEnter">Регистрация</a>
+        &nbsp;
+        Выберите язык:
+        &nbsp;
+        <select name="languageSelection" size="1">
+            <option value="first">English</option>
+            <option selected="selected" value="second">Русский</option>
+        </select>
+
+    </p>
+</form>
+
 
 </body>
 </html>
