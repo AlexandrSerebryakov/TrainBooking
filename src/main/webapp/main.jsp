@@ -8,7 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Train booking</title>
+    <title>Train booking - Главная страница</title>
 </head>
 <body>
 <p align="center" style="color:#6352ff; font-size:30px">
@@ -24,7 +24,7 @@
 
         <button>Войти в систему</button>
         &nbsp;
-        <a href="${pageContext.request.contextPath}/main.jsp" class="linkEnter">Регистрация</a>
+        <a href="${pageContext.request.contextPath}/registration.jsp" class="linkEnter">Регистрация</a>
         &nbsp;
         Выберите язык:
         &nbsp;

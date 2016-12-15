@@ -9,7 +9,7 @@
 
 <html>
 <head>
-    <title>TRAIN BOOKING. RIGHT NOW!</title>
+    <title>TRAIN BOOKING. Прямо сейчас!</title>
     <style type="text/css">
         A { font-size: 14px; color: red; }
         A.linkEnter { font-size: 30px; color: green; }
