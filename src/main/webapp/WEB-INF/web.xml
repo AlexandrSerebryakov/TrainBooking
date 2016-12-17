@@ -5,7 +5,7 @@
          version="3.1">
     <servlet>
         <servlet-name>MainControllerServlet</servlet-name>
-        <servlet-class>alex.servlet.MainControllerServlet</servlet-class>
+        <servlet-class>com.epam.alex.trainbooking.servlet.MainControllerServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>MainControllerServlet</servlet-name>

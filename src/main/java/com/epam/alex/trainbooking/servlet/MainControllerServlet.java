@@ -1,4 +1,4 @@
-package alex.servlet;
+package com.epam.alex.trainbooking.servlet;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
