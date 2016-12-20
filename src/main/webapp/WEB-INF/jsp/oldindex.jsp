@@ -17,16 +17,16 @@
 </head>
 <body>
 <p align="center" style="color:#302cff; font-size:30px">
-Продажа железнодорожных билетов прямо здесь и сейчас!</p>
+    Продажа железнодорожных билетов прямо здесь и сейчас!</p>
 <p align="center" style="color:#302cff; font-size:50px">
-TRAIN BOOKING!</p>
-<p align="center"><img src="Rails.jpg" alt="Rails.jpg"></p>
+    TRAIN BOOKING!</p>
+<p align="center"><img src="../../Rails.jpg" alt="Rails.jpg"></p>
 
 <p align="center"><a  href="${pageContext.request.contextPath}https://www.epam.kz/">Информационная поддержка: EPAM Systems!</a></p>
-<p align="center"><a  href="${pageContext.request.contextPath}/main.jsp"class="linkEnter">ВОЙТИ НА САЙТ</a></p>
+<p align="center"><a href="${pageContext.request.contextPath}/WEB-INF/jsp/main.jsp" class="linkEnter">ВОЙТИ НА САЙТ</a></p>
 
 
-<img src="JavaRushPartner.png" alt="Logotype" align="right">
+<img src="../../JavaRushPartner.png" alt="Logotype" align="right">
 
 <form action="https://www.epam.kz/" method="post">
 
