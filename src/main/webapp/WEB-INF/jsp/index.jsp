@@ -9,14 +9,12 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <%@taglib prefix="t" tagdir="/WEB-INF/tags" %>
+<%--
+<fmt:setLocale value="en"/>
+--%>
+<fmt:setBundle basename="lang"/>
 
+<fmt:message key="index.title" var="title"/>
 
-<html>
-<head>
-    <title>Title</title>
-</head>
-<body>
+<t:basicpage title="${title}"/>
 
-
-</body>
-</html>

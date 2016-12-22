@@ -1,0 +1,50 @@
+#header { /* Заголовок */
+    background: #c07276; /* Цвет фона */
+    padding: 10px; /* Поля вокруг текста */
+    text-align: center;
+}
+
+h1 {
+    margin: 0; /* Без отступов */
+    font-size: 36px; /* Размер шрифта */
+    color: #ffb53a; /* Цвет текста */
+}
+
+h2 {
+    margin-top: 0; /* Без отступа сверху */
+}
+
+
+body {
+    font: 17pt TimesNewRoman, italic, ornament; /* Шрифт текста */
+    margin: auto; /* Отступы на странице */
+}
+
+
+
+#sidebar { /* Левая колонка */
+    border: 1px ridge #bb181f; /* Параметры рамки вокруг */
+    float: left; /* Обтекание справа */
+    width: 9%; /* Ширина колонки */
+    padding: 5px; /* Поля вокруг текста */
+    margin: 10px 10px 20px 5px; /* Отступы */
+}
+
+#content { /* Контент-колонка */
+    border: 1px ridge #bb181f; /* Параметры рамки */
+    margin: 10px 5px 20px 12%; /* Значения отступов */
+    padding: 5px; /* Поля вокруг текста */
+}
+
+
+#errorcolortext {
+    color: #ff2455; /* Цвет текста */
+}
+
+#footer { /* Подвал */
+    background: #c42e2a; /* Цвет фона */
+    padding: 3px; /* Поля вокруг текста */
+    color: #3cffe9; /* Цвет текста */
+    clear: left; /* Отменяем float */
+    text-align: center;
+}

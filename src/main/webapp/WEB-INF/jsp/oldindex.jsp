@@ -23,7 +23,7 @@
 <p align="center"><img src="../../Rails.jpg" alt="Rails.jpg"></p>
 
 <p align="center"><a  href="${pageContext.request.contextPath}https://www.epam.kz/">Информационная поддержка: EPAM Systems!</a></p>
-<p align="center"><a href="${pageContext.request.contextPath}/WEB-INF/jsp/main.jsp" class="linkEnter">ВОЙТИ НА САЙТ</a></p>
+<p align="center"><a href="${pageContext.request.contextPath}/WEB-INF/jsp/oldmain.jsp" class="linkEnter">ВОЙТИ НА САЙТ</a></p>
 
 
 <img src="../../JavaRushPartner.png" alt="Logotype" align="right">
