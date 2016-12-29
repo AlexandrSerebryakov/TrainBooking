@@ -57,11 +57,11 @@
 
     <jsp:invoke fragment="sidebar"/>
 
-    <p><a href="${prefix}/?action=show-index"><fmt:message key="sidebar.menu.main"/></a></p>
+    <p><a href="${prefix}/?action=open-index"><fmt:message key="sidebar.menu.main"/></a></p>
 
     <c:if test="${empty role}">
-        <p><a href="${prefix}/?action=show-register-form"><fmt:message key="sidebar.menu.register"/></a></p>
-        <p><a href="${prefix}/?action=show-login-form"><fmt:message key="sidebar.menu.login"/></a></p>
+        <p><a href="${prefix}/?action=open-register-form"><fmt:message key="sidebar.menu.register"/></a></p>
+        <p><a href="${prefix}/?action=open-login-form"><fmt:message key="sidebar.menu.login"/></a></p>
     </c:if>
 
 
