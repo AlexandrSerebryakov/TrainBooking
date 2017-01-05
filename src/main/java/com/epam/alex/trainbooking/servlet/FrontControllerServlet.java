@@ -4,8 +4,6 @@ import com.epam.alex.trainbooking.action.Action;
 import com.epam.alex.trainbooking.action.ActionFactory;
 
 import javax.servlet.ServletException;
-import javax.servlet.annotation.MultipartConfig;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -14,8 +12,13 @@ import java.io.IOException;
 /**
  * Created by ${AlexandrSerebryakov} on ${09.10.2016}.
  */
-@WebServlet(name = "FrontControllerServlet", urlPatterns = "/do/*")
+/*
+@WebServlet(name = "FrontControllerServlet", urlPatterns = "/do*/
+/*")
+*/
+/*
 @MultipartConfig
+*/
 
 public class FrontControllerServlet extends HttpServlet {
 
@@ -47,6 +50,7 @@ public class FrontControllerServlet extends HttpServlet {
             Action action = actionFactory.getAction(actionName);
             String view = action.execute(req, resp);
             proceedTo(view, req, resp);
+
         } catch (IllegalAccessException | InstantiationException | ClassNotFoundException e) {
             e.printStackTrace();
         }
@@ -60,6 +64,8 @@ public class FrontControllerServlet extends HttpServlet {
             resp.sendRedirect(view.substring(REDIRECT_PREFIX.length()));
         } else {
         */    req.getRequestDispatcher(PATH_TO_JSP + view + FILE_JSP).forward(req, resp);
+
+
         /*}*/
     }
 

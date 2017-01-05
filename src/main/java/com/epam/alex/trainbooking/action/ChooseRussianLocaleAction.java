@@ -10,13 +10,21 @@ public class ChooseRussianLocaleAction implements Action {
     private static final String LOCALE = "ru";
     private static final String LOCALE_ATTR_NAME = "locale";
     private static final String REDIRECT_PREFIX = "redirect:";
+    private static final String MAIN_JSP = "index";
 
     @Override
     public String execute(HttpServletRequest req, HttpServletResponse res) {
         req.getSession(false).setAttribute(LOCALE_ATTR_NAME, LOCALE);
+
+/*
         String referrer = req.getHeader("referrer");
+*/
+/*
         return REDIRECT_PREFIX + referrer;
+*/
+        return req.getContextPath();
     }
 
     }
+
 
