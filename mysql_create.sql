@@ -43,7 +43,7 @@ CREATE TABLE `Seat` (
 	`seat_number` INT(9) NOT NULL,
 	`carriage_id` INT NOT NULL,
 	`seat_type_id` INT NOT NULL,
-	`occupied` BOOLEAN(9) NOT NULL,
+	`occupied` BOOLEAN NOT NULL,
 	PRIMARY KEY (`seat_id`)
 );
 
