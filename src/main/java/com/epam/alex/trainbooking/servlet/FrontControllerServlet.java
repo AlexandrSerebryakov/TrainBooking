@@ -25,6 +25,7 @@ public class FrontControllerServlet extends HttpServlet {
     private static final String REDIRECT_PREFIX = "redirect:";
     private static final String ACTION_PREFIX = "action";
     private static final String PATH_TO_JSP = "/WEB-INF/jsp/";
+    private static final String PATH_TO_EPAM = "https://www.epam.kz/";
     private static final String FILE_JSP = ".jsp";
     private ActionFactory actionFactory;
 
@@ -63,10 +64,13 @@ public class FrontControllerServlet extends HttpServlet {
         /*if (view.startsWith(REDIRECT_PREFIX)) {
             resp.sendRedirect(view.substring(REDIRECT_PREFIX.length()));
         } else {
-        */    req.getRequestDispatcher(PATH_TO_JSP + view + FILE_JSP).forward(req, resp);
+
+        */
 
 
-        /*}*/
+        req.getRequestDispatcher(PATH_TO_JSP + view + FILE_JSP).forward(req, resp);
+
+
     }
 
     private String getActionName(HttpServletRequest req) {

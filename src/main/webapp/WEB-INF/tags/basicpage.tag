@@ -34,6 +34,13 @@
 <body>
 
 <div id="header">
+
+
+    <p align="center"><a  href="${pageContext.request.contextPath}https://www.epam.kz/">EPAM Systems!</a></p>
+
+
+
+
     <jsp:invoke fragment="header"/>
     <h1><fmt:message key="index.header.message"/></h1>
 
