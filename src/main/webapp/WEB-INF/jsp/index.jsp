@@ -18,14 +18,18 @@
 <t:basicpage title="${title}">
     <jsp:body>
 
+        <fmt:message key="index.stage"/>
+
         <label><b><fmt:message key="index.direction.from"/></b></label>
         <input type="text" name="directionFrom" placeholder="${loginPlaceholder}" required autofocus value="">
         <label><b><fmt:message key="index.direction.to"/></b></label>
         <input type="text" name="directionTo" placeholder="${loginPlaceholder}" required autofocus value="">
         <label><b><fmt:message key="index.direction.date"/></b></label>
         <input type="date" name="directionDate" placeholder="${loginPlaceholder}" required autofocus value="">
-        <button type="submit"><fmt:message key="index.button.find"/></button>
 
+        <form action="/do/?action=goto-schedule-form" method="post">
+            <button type="submit"><fmt:message key="index.button.find"></fmt:message></button>
+        </form>
 
     </jsp:body>
 
