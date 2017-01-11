@@ -2,6 +2,10 @@ package com.epam.alex.trainbooking.servlet;
 
 import com.epam.alex.trainbooking.action.Action;
 import com.epam.alex.trainbooking.action.ActionFactory;
+import com.epam.alex.trainbooking.exception.ActionException;
+import com.epam.alex.trainbooking.exception.ActionFactoryException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -21,6 +25,7 @@ import java.io.IOException;
 */
 
 public class FrontControllerServlet extends HttpServlet {
+    private static final Logger logger = LoggerFactory.getLogger(FrontControllerServlet.class);
 
     private static final String REDIRECT_PREFIX = "redirect:";
     private static final String ACTION_PREFIX = "action";
@@ -35,27 +40,25 @@ public class FrontControllerServlet extends HttpServlet {
         actionFactory = new ActionFactory();
         try {
             actionFactory.loadActions();
-
-        } catch (IOException e) {
-            // TODO change IOExc to ActionExc
-            e.printStackTrace();
+        } catch (ActionFactoryException e) {
+            logger.error("Action Factory error in controller occurred", e);
         }
     }
 
     @Override
-    protected void service(HttpServletRequest req, HttpServletResponse resp) throws
-            ServletException, IOException {
+    protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         String actionName = getActionName(req);
         try {
             Action action = actionFactory.getAction(actionName);
+            logger.debug("Received {} request with command: \"{}\", get action: {}", req.getMethod(), actionName, action.getClass().getSimpleName());
             String view = action.execute(req, resp);
             proceedTo(view, req, resp);
-
-        } catch (IllegalAccessException | InstantiationException | ClassNotFoundException e) {
-            e.printStackTrace();
+        } catch (ActionException | ActionFactoryException e) {
+            logger.error("Exception in controller occurred", e);
         }
     }
+
 
 
     private void proceedTo(String view, HttpServletRequest req, HttpServletResponse resp) throws IOException,
