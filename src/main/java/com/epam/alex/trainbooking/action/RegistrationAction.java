@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class RegistrationAction implements Action {
 
-    private static final String INDEX_JSP = "index";
+    private static final String INDEX_JSP = "register_success";
 
     @Override
     public String execute(HttpServletRequest req, HttpServletResponse res) throws ActionException {
