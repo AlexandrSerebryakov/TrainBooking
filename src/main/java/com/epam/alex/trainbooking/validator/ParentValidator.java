@@ -1,7 +1,39 @@
 package com.epam.alex.trainbooking.validator;
 
+import com.epam.alex.trainbooking.exception.ValidatorException;
+
 /**
- * Created by ${AlexandrSerebryakov} on ${09.10.2016}.
+ * Super class for all Validators
  */
-public class ParentValidator {
+
+public class ParentValidator implements Validator {
+
+    private String message;
+
+    ParentValidator() {
+    }
+
+
+    @Override
+    public Boolean isValid(String parameter) throws ValidatorException {
+        return null;
+    }
+
+    @Override
+    public Boolean isValid(String parameter, String otherParameter) throws ValidatorException {
+        return null;
+    }
+
+    @Override
+    public Boolean isValid(Long parameter) throws ValidatorException {
+        return null;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
 }
