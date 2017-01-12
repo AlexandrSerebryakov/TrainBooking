@@ -22,7 +22,7 @@ import java.util.concurrent.TimeUnit;
 
 public class ConnectionPool {
 
-    private static final String DB_PROPERTY_FILE_NAME = "database.properties";
+    private static final String DB_PROPERTY_FILE_NAME = "db.properties";
     private static final int TIMEOUT_CHECK_CONNECTION = 1;
     private static final Logger logger = LoggerFactory.getLogger(ConnectionPool.class);
     private static final String JDBC_DRIVERS_KEY = "jdbc.drivers";
@@ -31,7 +31,7 @@ public class ConnectionPool {
     private static final String JDBC_PASSWORD_KEY = "jdbc.password";
     private static final String JDBC_POOL_START_SIZE_KEY = "pool.start.size";
     private static final String JDBC_POOL_MAX_SIZE_KEY = "pool.max.size";
-    private static final String JDBC_POOL_CONN_TIME_OUT_KEY = "pool.pollconnection.timeout";
+    private static final String JDBC_POOL_CONN_TIME_OUT_KEY = "pool.poolconnection.timeout";
     private int connectionCount;
     private String url;
     private String username;
