@@ -10,7 +10,7 @@ CREATE TABLE `Trip` (
 	PRIMARY KEY (`trip_id`)
 );
 
-CREATE TABLE `User` (
+CREATE TABLE `UserCustom` (
 	`user_id` INT NOT NULL,
 	`role_id` INT NOT NULL,
 	`login` varchar(12) NOT NULL,
@@ -158,13 +158,13 @@ ALTER TABLE `Trip` ADD CONSTRAINT `Trip_fk0` FOREIGN KEY (`station_from_id`) REF
 
 ALTER TABLE `Trip` ADD CONSTRAINT `Trip_fk1` FOREIGN KEY (`station_to_id`) REFERENCES `Station`(`station_id`);
 
-ALTER TABLE `User` ADD CONSTRAINT `User_fk0` FOREIGN KEY (`role_id`) REFERENCES `Role`(`role_id`);
+ALTER TABLE `UserCustom` ADD CONSTRAINT `UserCustom_fk0` FOREIGN KEY (`role_id`) REFERENCES `Role`(`role_id`);
 
-ALTER TABLE `User` ADD CONSTRAINT `User_fk1` FOREIGN KEY (`purse_id`) REFERENCES `Purse`(`purse_id`);
+ALTER TABLE `UserCustom` ADD CONSTRAINT `UserCustom_fk1` FOREIGN KEY (`purse_id`) REFERENCES `Purse`(`purse_id`);
 
-ALTER TABLE `User` ADD CONSTRAINT `User_fk2` FOREIGN KEY (`ticket_id`) REFERENCES `Ticket`(`ticket_id`);
+ALTER TABLE `UserCustom` ADD CONSTRAINT `UserCustom_fk2` FOREIGN KEY (`ticket_id`) REFERENCES `Ticket`(`ticket_id`);
 
-ALTER TABLE `User` ADD CONSTRAINT `User_fk3` FOREIGN KEY (`locale_id`) REFERENCES `Locale`(`locale_id`);
+ALTER TABLE `UserCustom` ADD CONSTRAINT `UserCustom_fk3` FOREIGN KEY (`locale_id`) REFERENCES `Locale`(`locale_id`);
 
 ALTER TABLE `Train` ADD CONSTRAINT `Train_fk0` FOREIGN KEY (`train_type_id`) REFERENCES `Train_type`(`train_type_id`);
 
@@ -188,7 +188,7 @@ ALTER TABLE `Ticket` ADD CONSTRAINT `Ticket_fk2` FOREIGN KEY (`carriage_id`) REF
 
 ALTER TABLE `Ticket` ADD CONSTRAINT `Ticket_fk3` FOREIGN KEY (`seat_id`) REFERENCES `Seat`(`seat_id`);
 
-ALTER TABLE `Ticket` ADD CONSTRAINT `Ticket_fk4` FOREIGN KEY (`user_id`) REFERENCES `User`(`user_id`);
+ALTER TABLE `Ticket` ADD CONSTRAINT `Ticket_fk4` FOREIGN KEY (`user_id`) REFERENCES `UserCustom`(`user_id`);
 
 ALTER TABLE `Station` ADD CONSTRAINT `Station_fk0` FOREIGN KEY (`locality_id`) REFERENCES `Locality`(`locality_id`);
 
@@ -206,4 +206,4 @@ ALTER TABLE `Route_station` ADD CONSTRAINT `Route_station_fk1` FOREIGN KEY (`sta
 
 ALTER TABLE `Purse` ADD CONSTRAINT `Purse_fk0` FOREIGN KEY (`currency_id`) REFERENCES `Currency`(`currency_id`);
 
-ALTER TABLE `Purse` ADD CONSTRAINT `Purse_fk1` FOREIGN KEY (`user_id`) REFERENCES `User`(`user_id`);
+ALTER TABLE `Purse` ADD CONSTRAINT `Purse_fk1` FOREIGN KEY (`user_id`) REFERENCES `UserCustom`(`user_id`);

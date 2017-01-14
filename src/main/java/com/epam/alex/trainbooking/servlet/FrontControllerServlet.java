@@ -8,6 +8,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import javax.servlet.ServletException;
+import javax.servlet.annotation.MultipartConfig;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -16,13 +18,9 @@ import java.io.IOException;
 /**
  * Created by ${AlexandrSerebryakov} on ${09.10.2016}.
  */
-/*
-@WebServlet(name = "FrontControllerServlet", urlPatterns = "/do*/
-/*")
-*/
-/*
+
+@WebServlet(name = "FrontControllerServlet", urlPatterns = "/do/*")
 @MultipartConfig
-*/
 
 public class FrontControllerServlet extends HttpServlet {
     private static final Logger logger = LoggerFactory.getLogger(FrontControllerServlet.class);
@@ -64,17 +62,10 @@ public class FrontControllerServlet extends HttpServlet {
     private void proceedTo(String view, HttpServletRequest req, HttpServletResponse resp) throws IOException,
             ServletException {
 
-        /*if (view.startsWith(REDIRECT_PREFIX)) {
-            resp.sendRedirect(view.substring(REDIRECT_PREFIX.length()));
-        } else {
-
-        */
+            req.getRequestDispatcher(PATH_TO_JSP + view + FILE_JSP).forward(req, resp);
+        }
 
 
-        req.getRequestDispatcher(PATH_TO_JSP + view + FILE_JSP).forward(req, resp);
-
-
-    }
 
     private String getActionName(HttpServletRequest req) {
         return req.getParameter(ACTION_PREFIX);

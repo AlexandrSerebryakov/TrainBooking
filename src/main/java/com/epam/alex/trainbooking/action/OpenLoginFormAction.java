@@ -11,6 +11,8 @@ public class OpenLoginFormAction implements Action {
 
     @Override
     public String execute(HttpServletRequest req, HttpServletResponse res) {
+
+
         return LOGIN_FORM;
     }
 }
