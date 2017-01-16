@@ -25,6 +25,9 @@
         <label><b><fmt:message key="index.direction.date"/></b></label>
         <input type="date" name="directionDate" placeholder="${loginPlaceholder}" required autofocus value="" readonly>
 
+        <form action="/do/?action=goto-payment-form" method="post">
+            <button type="submit"><fmt:message key="passenger.information.button.next"></fmt:message></button>
+        </form>
 
     </jsp:body>
 
