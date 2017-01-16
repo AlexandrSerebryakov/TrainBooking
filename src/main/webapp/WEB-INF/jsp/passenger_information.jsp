@@ -11,7 +11,7 @@
 <%@ taglib prefix="t" tagdir="/WEB-INF/tags" %>
 
 <fmt:setBundle basename="lang"/>
-<fmt:message key="index.title" var="title"/>
+<fmt:message key="passenger.information.title" var="title"/>
 
 <t:basicpage title="${title}">
     <jsp:body>
