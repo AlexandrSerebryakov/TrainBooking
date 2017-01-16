@@ -17,8 +17,6 @@
     <jsp:body>
         <fmt:message key="train.schedule.stage"/>
 
-        <%--<form name="registerForm" action="/do/?action=" method="post">--%>
-
 
         <label><b><fmt:message key="index.direction.from"/></b></label>
         <input type="text" name="directionFrom" placeholder="${loginPlaceholder}" required autofocus value="" readonly>
@@ -27,6 +25,9 @@
         <label><b><fmt:message key="index.direction.date"/></b></label>
         <input type="date" name="directionDate" placeholder="${loginPlaceholder}" required autofocus value="" readonly>
 
+        <form action="/do/?action=goto-seat-availability-form" method="post">
+            <button type="submit"><fmt:message key="train.schedule.button.find"></fmt:message></button>
+        </form>
 
     </jsp:body>
 
