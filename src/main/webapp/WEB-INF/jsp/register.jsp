@@ -21,7 +21,9 @@
     <jsp:body>
 
         <p><fmt:message key="register.hello.message"/></p>
+
         <form name="registerForm" action="/do/?action=register" method="post">
+
             <label><b><fmt:message key="register.login"/></b></label>
             <small><fmt:message key="register.login.range"/></small>
             <br>
@@ -49,6 +51,8 @@
             <br><br>
 
             <button type="submit"><fmt:message key="register.button.submit"/></button>
+            <p align="right"><img src="../../advertising_health.jpg" alt="advertising_health.jpg"></p>
+
             <c:if test="${not empty registerErrorMessage}">
                 <div id="errorcolortext"><fmt:message key="${registerErrorMessages}"/></div>
             </c:if>

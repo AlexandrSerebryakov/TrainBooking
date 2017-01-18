@@ -28,6 +28,8 @@
         <form action="/do/?action=goto-ticket-form" method="post">
             <button type="submit"><fmt:message key="payment.button.receive.ticket"></fmt:message></button>
         </form>
+        <p align="right"><img src="../../advertising_meh_2!.jpg" alt="advertising_meh_2!"></p>
+
 
     </jsp:body>
 

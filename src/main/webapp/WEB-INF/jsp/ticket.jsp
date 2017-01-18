@@ -24,6 +24,7 @@
         <input type="text" name="directionTo" placeholder="${loginPlaceholder}" required autofocus value="" readonly>
         <label><b><fmt:message key="index.direction.date"/></b></label>
         <input type="date" name="directionDate" placeholder="${loginPlaceholder}" required autofocus value="" readonly>
+        <p align="right"><img src="../../advertising_monro.jpg" alt="advertising_monro.jpg"></p>
 
 
     </jsp:body>

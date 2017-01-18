@@ -28,6 +28,7 @@
         <form action="/do/?action=goto-passenger-information-form" method="post">
             <button type="submit"><fmt:message key="seat.availability.button.find"></fmt:message></button>
         </form>
+        <p align="right"><img src="../../advertising_tele2.jpg" alt="advertising_tele2.jpg"></p>
 
     </jsp:body>
 

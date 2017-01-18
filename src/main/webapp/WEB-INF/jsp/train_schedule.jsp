@@ -28,6 +28,8 @@
         <form action="/do/?action=goto-seat-availability-form" method="post">
             <button type="submit"><fmt:message key="train.schedule.button.find"></fmt:message></button>
         </form>
+        <p align="right"><img src="../../advertising_meh!.jpg" alt="advertising_meh!.jpg"></p>
+
 
     </jsp:body>
 

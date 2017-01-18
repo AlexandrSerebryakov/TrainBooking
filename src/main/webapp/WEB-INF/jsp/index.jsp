@@ -28,6 +28,8 @@
         <form action="/do/?action=goto-schedule-form" method="post">
             <button type="submit"><fmt:message key="index.button.find"></fmt:message></button>
         </form>
+        <p align="right"><img src="../../advertising_beeline.jpg" alt="advertising_beeline.jpg"></p>
+
 
     </jsp:body>
 

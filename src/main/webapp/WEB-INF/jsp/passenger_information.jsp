@@ -28,6 +28,7 @@
         <form action="/do/?action=goto-payment-form" method="post">
             <button type="submit"><fmt:message key="passenger.information.button.next"></fmt:message></button>
         </form>
+        <p align="right"><img src="../../advertising_rostelecom.jpg" alt="advertising_rostelecom.jpg"></p>
 
     </jsp:body>
 
